@@ -21,7 +21,7 @@ steps:
     dir: /workspace
     entrypoint: bash
     args:
-      - run.sh
+      - run_customer.sh
     env:
       - PROJECT_ID=data-mesh-domain-product
       - BQ_LOCATION=us-central1
