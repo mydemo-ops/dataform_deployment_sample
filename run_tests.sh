@@ -16,7 +16,7 @@
 
 dataform install
 
-echo "{\"projectId\": \"${PROJECT_ID}\", \"location\": \"${BQ_LOCATION}\"}" > .df-credentials.json
+echo "{\"projectId\": \"data-mesh-domain-data\", \"location\": \"us-central1\"}" > .df-credentials.json
 
 printf """
 Executing the following dataform command:
