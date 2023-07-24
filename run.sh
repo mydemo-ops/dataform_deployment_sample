@@ -16,7 +16,7 @@
 
 dataform install
 
-echo "{\"projectId\": \"${PROJECT_ID}\", \"location\": \"${BQ_LOCATION}\"}" > .df-credentials.json
+echo "{\"projectId\": \"data-mesh-domain-data\", \"location\": \"us-central1\"}" > .df-credentials.json
 
 # Need to specify a separate flag for each individual action/tag/var value ie. dataform run --tags example1 --tags example2 --tags example3
 #  https://github.com/dataform-co/dataform/issues/1200
