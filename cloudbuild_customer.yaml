@@ -23,8 +23,8 @@ steps:
     args:
       - run.sh
     env:
-      - PROJECT_ID=${_PROJECT_ID}
-      - BQ_LOCATION=${_BQ_LOCATION}
+      - PROJECT_ID=data-mesh-domain-product
+      - BQ_LOCATION=us-central1
       - DATAFORM_TAGS=customer
   ###########################################################
   # Publish a Pub/Sub message to invoke the next trigger in your pipeline
@@ -35,7 +35,7 @@ steps:
     entrypoint: gcloud
     args: ['pubsub', 'topics', 'publish', 'dataform-deployments', '--message="SUCCESS"', '--attribute=subjectArea="CUSTOMER"']
     env:
-      - PROJECT_ID=${_PROJECT_ID}
-      - BQ_LOCATION=${_BQ_LOCATION}
+      - PROJECT_ID=data-mesh-domain-product
+      - BQ_LOCATION=us-central1
 options:
   logging: CLOUD_LOGGING_ONLY
